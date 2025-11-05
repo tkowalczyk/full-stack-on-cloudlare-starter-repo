@@ -28,7 +28,7 @@ export function HeroSection() {
             className="mb-6 px-4 py-2 text-sm font-medium bg-primary/5 border-primary/20 text-primary"
           >
             <Sparkles className="mr-2 h-3 w-3" />
-            Trusted by 10,000+ businesses worldwide
+            Trusted by 10,001+ businesses worldwide
           </Badge>
 
           {/* Main headline */}
