@@ -3,11 +3,13 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev --x-remote-bindings",
+		"deploy:stage": "wrangler deploy --env stage",
+		"deploy:production": "wrangler deploy --env production",
+		"dev": "wrangler dev",
 		"start": "wrangler dev",
 		"test": "vitest",
-		"cf-typegen": "wrangler types --env-interface BaseEnv"
+		"cf-typegen:stage": "wrangler types --env-interface BaseEnv --env stage",
+		"cf-typegen:production": "wrangler types --env-interface BaseEnv --env production"
 	},
 	"devDependencies": {
 		"@cloudflare/puppeteer": "^1.0.3",
@@ -15,7 +17,7 @@
 		"@types/node": "^22.15.19",
 		"typescript": "^5.5.2",
 		"vitest": "~3.2.0",
-		"wrangler": "^4.42.2"
+		"wrangler": "^4.45.3"
 	},
 	"dependencies": {
 		"@repo/data-ops": "workspace:*",
