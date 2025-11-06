@@ -7,7 +7,8 @@
   "name": "user-application",
   "main": "worker/index.ts",
   "compatibility_date": "2025-06-17",
-  "workers_dev": true,
+  "workers_dev": false,
+  "preview_urls": false,
   "assets": {
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
@@ -17,6 +18,12 @@
   },
   "env": {
     "stage": {
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "stage.proofdrop.me"
+        }
+      ],
       "name": "user-application-stage",
       "d1_databases": [
         {
@@ -34,6 +41,12 @@
       ]
     },
     "production": {
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "proofdrop.me"
+        }
+      ],
       "name": "user-application-production",
       "d1_databases": [
         {
