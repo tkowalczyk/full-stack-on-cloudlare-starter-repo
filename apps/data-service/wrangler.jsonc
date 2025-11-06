@@ -7,6 +7,7 @@
 	"name": "data-service",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-06-17",
+	"workers_dev": true,
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
@@ -15,6 +16,7 @@
 	},
 	"env": {
 		"stage": {
+			"name": "data-service-stage",
 			"browser": {
 				"binding": "VIRTUAL_BROWSER",
 			},
@@ -94,6 +96,7 @@
 			]
 		},
 		"production": {
+			"name": "data-service-production",
 			"browser": {
 				"binding": "VIRTUAL_BROWSER",
 			},
