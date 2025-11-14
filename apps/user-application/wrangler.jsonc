@@ -7,6 +7,9 @@
   "name": "user-application",
   "main": "worker/index.ts",
   "compatibility_date": "2025-06-17",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "workers_dev": false,
   "preview_urls": false,
   "assets": {
@@ -19,6 +22,12 @@
   },
   "env": {
     "stage": {
+      "vars":{
+        "STRIPE_PRODUCT_BASIC": "price_1STJUiF3nAekxp6KympNwDCN",
+        "STRIPE_PRODUCT_PRO": "price_1STJWoF3nAekxp6KIgKmn426",
+        "STRIPE_PRODUCT_ENTERPRISE": "price_1STJXvF3nAekxp6KdJIaN9t3",
+        "GOOGLE_CLIENT_ID": "399017916677-f46584ekaib1srapnthgki6v3qbd7sm8.apps.googleusercontent.com",
+      },
       "routes": [
         {
           "custom_domain": true,

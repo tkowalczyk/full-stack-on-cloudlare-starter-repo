@@ -11,6 +11,23 @@ const getAuthInstance = (env: Env) => {
   return getAuth({
     clientId: env.GOOGLE_CLIENT_ID,
     clientSecret: env.GOOGLE_CLIENT_SECRET
+  }, {
+    stripeWebhookSecret: env.STRIPE_WEBHOOK_KEY,
+    stripeApiKey: env.STRIPE_SECRET_KEY,
+    plans: [
+      {
+        name: "basic",
+        priceId: env.STRIPE_PRODUCT_BASIC
+      },
+      {
+        name: "pro",
+        priceId: env.STRIPE_PRODUCT_PRO
+      },
+      {
+        name: "enterprise",
+        priceId: env.STRIPE_PRODUCT_ENTERPRISE
+      }
+    ]
   })
 }
 
